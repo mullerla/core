@@ -65,6 +65,7 @@ FLOWS = [
     "dlna_dmr",
     "doorbird",
     "dsmr",
+    "dublin_luas",
     "dunehd",
     "dynalite",
     "eafm",

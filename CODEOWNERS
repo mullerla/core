@@ -127,6 +127,7 @@ homeassistant/components/dlna_dmr/* @StevenLooman @chishm
 homeassistant/components/doorbird/* @oblogic7 @bdraco
 homeassistant/components/dsmr/* @Robbie1221 @frenck
 homeassistant/components/dsmr_reader/* @depl0y
+homeassistant/components/dublin_luas/* @mullerla
 homeassistant/components/dunehd/* @bieniu
 homeassistant/components/dwd_weather_warnings/* @runningman84 @stephan192 @Hummel95
 homeassistant/components/dweet/* @fabaff

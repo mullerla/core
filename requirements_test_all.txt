@@ -569,6 +569,9 @@ libsoundtouch==0.8
 # homeassistant.components.logi_circle
 logi_circle==0.2.2
 
+# homeassistant.components.dublin_luas
+luas.py==0.3.3
+
 # homeassistant.components.luftdaten
 luftdaten==0.6.5
 

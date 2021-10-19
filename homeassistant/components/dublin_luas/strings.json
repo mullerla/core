@@ -1,0 +1,22 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "stop": "[%key:common::config_flow::data::stop%]",
+          "direction": "[%key:common::config_flow::data::direction%]",
+          "destination": "[%key:common::config_flow::data::destination%]",
+          "walk_time": "[%key:common::config_flow::data::walk_time%]"
+        }
+      }
+    },
+    "error": {
+      "invalid_stop": "[%key:common::config_flow::error::invalid_stop%]",
+      "invalid_direction": "[%key:common::config_flow::error::invalid_direction%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]"
+    }
+  }
+}

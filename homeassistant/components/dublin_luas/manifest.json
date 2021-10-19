@@ -1,0 +1,18 @@
+{
+  "domain": "dublin_luas",
+  "name": "Dublin Luas",
+  "config_flow": true,
+  "documentation": "https://www.home-assistant.io/integrations/dublin_luas",
+  "requirements": [
+    "luas.py==0.3.3"
+  ],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [],
+  "codeowners": [
+    "@mullerla"
+  ],
+  "iot_class": "cloud_polling",
+  "version": "1.0.0"
+}
