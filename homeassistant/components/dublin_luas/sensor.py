@@ -140,6 +140,7 @@ async def async_setup_entry(
                 )
             ]
         )
+    return
 
 
 class LuasTramSensor(CoordinatorEntity, SensorEntity):
@@ -169,7 +170,7 @@ class LuasTramSensor(CoordinatorEntity, SensorEntity):
             return f"Luas from {self._stop['name']} {self._direction}"
 
     @property
-    def unit_of_measurement(self) -> str:
+    def native_unit_of_measurement(self) -> str:
         return TIME_MINUTES
 
     @property
@@ -259,7 +260,7 @@ class LuasTramWaitSensor(CoordinatorEntity, SensorEntity):
             return f"Luas wait time from {self._stop['name']} {self._direction}"
 
     @property
-    def unit_of_measurement(self) -> str:
+    def native_unit_of_measurement(self) -> str:
         return TIME_MINUTES
 
     @property
@@ -269,14 +270,19 @@ class LuasTramWaitSensor(CoordinatorEntity, SensorEntity):
     @property
     def available(self) -> bool:
         try:
-            return self._get_next_tram() is not None
+            self._get_next_tram()
+            return True
         except:
             return False
 
     @property
     def state(self):
         """Return the state of the sensor."""
-        return self._get_next_tram().due - self._walk_time
+        next_tram = self._get_next_tram()
+        if next_tram:
+            return self._get_next_tram().due - self._walk_time
+        else:
+            return "unknown"
 
     def _get_next_tram(self):
         trams = self._get_trams()
